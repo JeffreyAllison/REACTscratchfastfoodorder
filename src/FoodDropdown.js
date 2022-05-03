@@ -3,7 +3,7 @@ import React from 'react';
 export default function FoodDropdown({ setFood }) {
   return (
     <div>
-      Choose a Drink Option:
+      Choose a Main Option:
       <select onChange={(e) => setFood(e.target.value)}>
         <option value="food-1">Beef Wellington</option>
         <option value="food-2">Kabobs</option>
