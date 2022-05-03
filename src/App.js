@@ -9,7 +9,28 @@ import OrderNameInput from './OrderNameInput';
 import Order from './Order';
 
 function App() {
-  return <div className="App"></div>;
+  const [drinkId, setDrink] = useState('drink-1');
+  const [sideId, setSide] = useState('side-1');
+  const [foodId, setFood] = useState('food-1');
+  const [orderName, setOrderName] = useState('customer');
+  const { instruction, setInstructions } = useState(['']);
+
+  return (
+    <div className="App">
+      <Order drinkId={drinkId} sideId={sideId} foodId={foodId} />
+      <h2>Order is ready for {orderName}!</h2>
+      <div className="bottom">
+        <OrderNameInput setOrderName={setOrderName} />
+        <section className="dropdowns">
+          <DrinkDropdown setDrink={setDrink} />
+          <SideDropdown setSide={setSide} />
+          <FoodDropdown setFood={setFood} />
+        </section>
+        <InstructionsForm setInstructions={setInstructions} instructions={instruction} />
+        <InstructionsList instructions={instruction} />
+      </div>
+    </div>
+  );
 }
 
 export default App;
