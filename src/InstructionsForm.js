@@ -11,10 +11,13 @@ export default function InstructionsForm({ instructions, setInstructions }) {
 
   return (
     <section>
-      <form onSubmit={handleSubmit}>
-        Add additional instructions to your order:
-        <input onChange={(e) => setInstructionInForm(e.target.value)} />
-        <button>Add Order Instructions</button>
+      <form className="instructions" onSubmit={handleSubmit}>
+        Add special instructions to your order <i>(not all instructions can be accommodated)</i>:
+        <input
+          className="instruction-input"
+          onChange={(e) => setInstructionInForm(e.target.value)}
+        />
+        <button>Add Special Instructions</button>
       </form>
     </section>
   );
