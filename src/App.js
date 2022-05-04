@@ -12,7 +12,7 @@ function App() {
   const [drinkId, setDrink] = useState('drink-1');
   const [sideId, setSide] = useState('side-1');
   const [foodId, setFood] = useState('food-1');
-  const [orderName, setOrderName] = useState('customer');
+  const [orderName, setOrderName] = useState('...');
   const [instructions, setInstructions] = useState(['']);
 
   return (
